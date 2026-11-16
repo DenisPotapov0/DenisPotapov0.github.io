@@ -126,9 +126,6 @@
               <a class="nav-link" href="#about">Обо мне</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#education">Образование</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="#interests">Навыки</a>
             </li>
             <li class="nav-item">
@@ -158,9 +155,7 @@
             <p class="hero-eyebrow mb-2">Персональная страница</p>
             <h1 class="hero-name display-4 fw-bold mb-3">Потапов Денис</h1>
             <p class="lead hero-lead mb-3">
-              Студент матмеха СПбГУ, направление «Программная инженерия». Пишу
-              код, разбираюсь в алгоритмах и люблю задачи, в которых нужно
-              докопаться до сути.
+              Студент матмеха СПбГУ, направление «Программная инженерия».
             </p>
             <div
               class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-2 mb-4"
@@ -210,12 +205,13 @@
     </header>
 
     <main>
-      <section id="about" class="section">
+      <section id="about" class="section section-alt">
         <div class="container" data-reveal>
           <div class="row g-4 align-items-start">
             <div class="col-lg-4">
-              <p class="section-kicker mb-2">Обо мне</p>
-              <h2 class="section-title h1 mb-0">Немного о себе</h2>
+              <p class="section-title h1 mb-0" role="heading" aria-level="2">
+                Обо мне
+              </p>
             </div>
             <div class="col-lg-8">
               <p class="mb-3">
@@ -229,69 +225,13 @@
         </div>
       </section>
 
-      <section id="education" class="section section-alt">
-        <div class="container" data-reveal>
-          <div class="row g-4 align-items-start">
-            <div class="col-lg-4">
-              <p class="section-kicker mb-2">Образование</p>
-              <h2 class="section-title h1 mb-0">Где я учусь</h2>
-            </div>
-            <div class="col-lg-8">
-              <div class="card card-lift border-0 shadow-sm rounded-4">
-                <div class="card-body p-4 p-md-5">
-                  <div class="d-flex flex-column flex-sm-row gap-3 gap-md-4">
-                    <div class="icon-badge icon-badge-lg flex-shrink-0">
-                      <i class="bi bi-mortarboard-fill" aria-hidden="true"></i>
-                    </div>
-                    <div>
-                      <div
-                        class="d-flex flex-wrap align-items-center gap-2 mb-2"
-                      >
-                        <h3 class="h4 mb-0">
-                          Санкт-Петербургский государственный университет
-                        </h3>
-                        <span class="badge badge-soft rounded-pill"
-                          >Студент</span
-                        >
-                      </div>
-                      <p class="text-body-secondary mb-3">
-                        Математико-механический факультет · направление
-                        «Программная инженерия»
-                      </p>
-                      <p class="mb-3">
-                        Учебный фокус — алгоритмы и структуры данных, языки
-                        программирования, системное программирование и машинное
-                        обучение.
-                      </p>
-                      <div class="d-flex flex-wrap gap-2">
-                        <span class="badge text-bg-light border"
-                          >Алгоритмы</span
-                        >
-                        <span class="badge text-bg-light border"
-                          >Структуры данных</span
-                        >
-                        <span class="badge text-bg-light border"
-                          >Языки программирования</span
-                        >
-                        <span class="badge text-bg-light border"
-                          >Системное программирование</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section id="interests" class="section">
         <div class="container" data-reveal>
           <div class="row g-4 align-items-start">
             <div class="col-lg-4">
-              <p class="section-kicker mb-2">Компетенции</p>
-              <h2 class="section-title h1 mb-0">Навыки</h2>
+              <p class="section-title h1 mb-0" role="heading" aria-level="2">
+                Компетенции
+              </p>
             </div>
             <div class="col-lg-8">
               <h3 class="h6 text-uppercase text-body-secondary fw-bold mb-3">
@@ -307,10 +247,6 @@
                         <i class="bi bi-shield-check" aria-hidden="true"></i>
                       </div>
                       <h3 class="h5">Rust</h3>
-                      <p class="text-body-secondary mb-0">
-                        Системные утилиты и библиотеки: безопасная работа с
-                        памятью, многопоточность, Cargo.
-                      </p>
                     </div>
                   </article>
                 </div>
@@ -323,10 +259,6 @@
                         <i class="bi bi-cpu" aria-hidden="true"></i>
                       </div>
                       <h3 class="h5">C</h3>
-                      <p class="text-body-secondary mb-0">
-                        Указатели, ручное управление памятью и низкоуровневые
-                        структуры данных.
-                      </p>
                     </div>
                   </article>
                 </div>
@@ -339,10 +271,6 @@
                         <i class="bi bi-code-slash" aria-hidden="true"></i>
                       </div>
                       <h3 class="h5">Kotlin</h3>
-                      <p class="text-body-secondary mb-0">
-                        Разработка приложений, ООП и функциональные возможности
-                        языка.
-                      </p>
                     </div>
                   </article>
                 </div>
@@ -361,10 +289,6 @@
                         <i class="bi bi-git" aria-hidden="true"></i>
                       </div>
                       <h3 class="h5">Git</h3>
-                      <p class="text-body-secondary mb-0">
-                        Ветвление, коммиты, слияния и работа с удалёнными
-                        репозиториями.
-                      </p>
                     </div>
                   </article>
                 </div>
@@ -377,10 +301,6 @@
                         <i class="bi bi-terminal" aria-hidden="true"></i>
                       </div>
                       <h3 class="h5">Linux</h3>
-                      <p class="text-body-secondary mb-0">
-                        Командная строка, сборка проектов и базовые инструменты
-                        разработчика.
-                      </p>
                     </div>
                   </article>
                 </div>
@@ -394,8 +314,9 @@
         <div class="container" data-reveal>
           <div class="row g-4 align-items-start">
             <div class="col-lg-4">
-              <p class="section-kicker mb-2">Проекты</p>
-              <h2 class="section-title h1 mb-0">Что я делал</h2>
+              <p class="section-title h1 mb-0" role="heading" aria-level="2">
+                Проекты
+              </p>
             </div>
             <div class="col-lg-8">
               <div class="row g-3 g-md-4">
@@ -476,10 +397,8 @@
         <div class="container" data-reveal>
           <div class="row g-4 align-items-start">
             <div class="col-lg-4">
-              <p class="section-kicker mb-2">Контакты</p>
-              <h2 class="section-title h1 mb-3">Связаться со мной</h2>
-              <p class="text-body-secondary mb-0">
-                Открыт к вопросам, обсуждению проектов и сотрудничеству.
+              <p class="section-title h1 mb-3" role="heading" aria-level="2">
+                Контакты
               </p>
             </div>
             <div class="col-lg-8">
