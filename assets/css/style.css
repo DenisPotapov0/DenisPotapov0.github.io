@@ -215,6 +215,11 @@ body {
   font-size: 1.35rem;
 }
 
+.icon-badge .chess-icon {
+  width: 1em;
+  height: 1em;
+}
+
 .icon-badge-lg {
   width: 4rem;
   height: 4rem;
@@ -241,9 +246,12 @@ body {
 }
 
 .contact-card .contact-value {
+  display: block;
   color: var(--bs-body-color);
   font-weight: 700;
-  word-break: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .contact-card:hover .contact-value {
