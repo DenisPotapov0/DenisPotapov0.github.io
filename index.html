@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="ru" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Потапов Денис — программная инженерия, СПбГУ</title>
+    <meta
+      name="description"
+      content="Персональная страница Дениса Потапова — студента матмеха СПбГУ, направление «Программная инженерия». Проекты, интересы и контакты."
+    />
+    <meta name="author" content="Потапов Денис" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Потапов Денис — персональная страница" />
+    <meta
+      property="og:description"
+      content="Студент матмеха СПбГУ, направление «Программная инженерия». Проекты, интересы и контакты."
+    />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:url" content="https://denispotapov0.github.io/" />
+    <meta
+      property="og:image"
+      content="https://denispotapov0.github.io/assets/img/avatar.jpg"
+    />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      id="theme-css"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/flatly/bootstrap.min.css"
+      data-flatly="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/flatly/bootstrap.min.css"
+      data-darkly="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/darkly/bootstrap.min.css"
+    />
+    <script>
+      (function () {
+        var link = document.getElementById("theme-css");
+        var theme = null;
+        try {
+          theme = localStorage.getItem("theme");
+        } catch (error) {}
+        if (theme !== "flatly" && theme !== "darkly") {
+          theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "darkly"
+            : "flatly";
+        }
+        link.href = link.dataset[theme];
+        document.documentElement.setAttribute(
+          "data-bs-theme",
+          theme === "darkly" ? "dark" : "light",
+        );
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body
+    data-bs-spy="scroll"
+    data-bs-target="#mainNav"
+    data-bs-root-margin="0px 0px -70%"
+    tabindex="0"
+  >
+    <nav id="mainNav" class="navbar navbar-expand-lg site-nav sticky-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#top">
+          <span class="brand-mark">ДП</span>
+          <span class="fw-bold">Потапов Денис</span>
+        </a>
+        <div class="d-flex align-items-center order-lg-3 gap-2">
+          <div class="dropdown">
+            <button
+              class="btn btn-sm btn-outline-secondary theme-toggle dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              aria-label="Выбрать цветовую тему"
+            >
+              <i id="themeIcon" class="bi bi-sun-fill" aria-hidden="true"></i>
+              <span id="themeLabel" class="d-none d-sm-inline">Светлая</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+              <li>
+                <button
+                  class="dropdown-item theme-option"
+                  type="button"
+                  data-theme="flatly"
+                >
+                  <i class="bi bi-sun-fill me-2" aria-hidden="true"></i>Светлая
+                </button>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item theme-option"
+                  type="button"
+                  data-theme="darkly"
+                >
+                  <i class="bi bi-moon-stars-fill me-2" aria-hidden="true"></i
+                  >Тёмная
+                </button>
+              </li>
+            </ul>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navMenu"
+            aria-controls="navMenu"
+            aria-expanded="false"
+            aria-label="Открыть меню"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse order-lg-2" id="navMenu">
+          <ul class="navbar-nav ms-auto me-lg-3 gap-lg-1">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Обо мне</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#education">Образование</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#interests">Навыки</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Проекты</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacts">Контакты</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header id="top" class="hero">
+      <div class="container position-relative">
+        <div class="row align-items-center g-4 g-lg-5">
+          <div class="col-lg-4 text-center text-lg-start">
+            <img
+              class="hero-avatar"
+              src="assets/img/avatar.jpg"
+              alt="Фото"
+              width="720"
+              height="720"
+            />
+          </div>
+          <div class="col-lg-8 text-center text-lg-start">
+            <p class="hero-eyebrow mb-2">Персональная страница</p>
+            <h1 class="hero-name display-4 fw-bold mb-3">Потапов Денис</h1>
+            <p class="lead hero-lead mb-3">
+              Студент матмеха СПбГУ, направление «Программная инженерия». Пишу
+              код, разбираюсь в алгоритмах и люблю задачи, в которых нужно
+              докопаться до сути.
+            </p>
+            <div
+              class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-2 mb-4"
+            >
+              <span class="badge badge-soft rounded-pill"
+                ><i class="bi bi-mortarboard me-1" aria-hidden="true"></i
+                >СПбГУ</span
+              >
+              <span class="badge badge-soft rounded-pill"
+                ><i class="bi bi-diagram-3 me-1" aria-hidden="true"></i
+                >Матмех</span
+              >
+              <span class="badge badge-soft rounded-pill"
+                ><i class="bi bi-code-slash me-1" aria-hidden="true"></i
+                >Программная инженерия</span
+              >
+            </div>
+            <div
+              class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-2"
+            >
+              <a
+                class="btn btn-accent btn-lg px-4"
+                href="https://github.com/DenisPotapov0"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="bi bi-github me-2" aria-hidden="true"></i>GitHub
+              </a>
+              <a
+                class="btn btn-outline-accent btn-lg px-4"
+                href="https://t.me/DAEReXQ"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="bi bi-telegram me-2" aria-hidden="true"></i>Telegram
+              </a>
+              <a
+                class="btn btn-outline-accent btn-lg px-4"
+                href="mailto:daerexq@yandex.ru"
+              >
+                <i class="bi bi-envelope me-2" aria-hidden="true"></i>Написать
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="about" class="section">
+        <div class="container" data-reveal>
+          <div class="row g-4 align-items-start">
+            <div class="col-lg-4">
+              <p class="section-kicker mb-2">Обо мне</p>
+              <h2 class="section-title h1 mb-0">Немного о себе</h2>
+            </div>
+            <div class="col-lg-8">
+              <p class="mb-3">
+                Мне нравится разбираться в том, как работают программы на разных
+                уровнях: от алгоритмов и структур данных до памяти, компиляторов
+                и производительности. Люблю писать код, читать чужой и доводить
+                задачи до рабочего результата.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section section-alt">
+        <div class="container" data-reveal>
+          <div class="row g-4 align-items-start">
+            <div class="col-lg-4">
+              <p class="section-kicker mb-2">Образование</p>
+              <h2 class="section-title h1 mb-0">Где я учусь</h2>
+            </div>
+            <div class="col-lg-8">
+              <div class="card card-lift border-0 shadow-sm rounded-4">
+                <div class="card-body p-4 p-md-5">
+                  <div class="d-flex flex-column flex-sm-row gap-3 gap-md-4">
+                    <div class="icon-badge icon-badge-lg flex-shrink-0">
+                      <i class="bi bi-mortarboard-fill" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                      <div
+                        class="d-flex flex-wrap align-items-center gap-2 mb-2"
+                      >
+                        <h3 class="h4 mb-0">
+                          Санкт-Петербургский государственный университет
+                        </h3>
+                        <span class="badge badge-soft rounded-pill"
+                          >Студент</span
+                        >
+                      </div>
+                      <p class="text-body-secondary mb-3">
+                        Математико-механический факультет · направление
+                        «Программная инженерия»
+                      </p>
+                      <p class="mb-3">
+                        Учебный фокус — алгоритмы и структуры данных, языки
+                        программирования, системное программирование и машинное
+                        обучение.
+                      </p>
+                      <div class="d-flex flex-wrap gap-2">
+                        <span class="badge text-bg-light border"
+                          >Алгоритмы</span
+                        >
+                        <span class="badge text-bg-light border"
+                          >Структуры данных</span
+                        >
+                        <span class="badge text-bg-light border"
+                          >Языки программирования</span
+                        >
+                        <span class="badge text-bg-light border"
+                          >Системное программирование</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="interests" class="section">
+        <div class="container" data-reveal>
+          <div class="row g-4 align-items-start">
+            <div class="col-lg-4">
+              <p class="section-kicker mb-2">Компетенции</p>
+              <h2 class="section-title h1 mb-0">Навыки</h2>
+            </div>
+            <div class="col-lg-8">
+              <h3 class="h6 text-uppercase text-body-secondary fw-bold mb-3">
+                Языки программирования
+              </h3>
+              <div class="row g-3 g-md-4 mb-4">
+                <div class="col-sm-4">
+                  <article
+                    class="card card-lift h-100 border-0 shadow-sm rounded-4"
+                  >
+                    <div class="card-body p-4">
+                      <div class="icon-badge mb-3">
+                        <i class="bi bi-shield-check" aria-hidden="true"></i>
+                      </div>
+                      <h3 class="h5">Rust</h3>
+                      <p class="text-body-secondary mb-0">
+                        Системные утилиты и библиотеки: безопасная работа с
+                        памятью, многопоточность, Cargo.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-sm-4">
+                  <article
+                    class="card card-lift h-100 border-0 shadow-sm rounded-4"
+                  >
+                    <div class="card-body p-4">
+                      <div class="icon-badge mb-3">
+                        <i class="bi bi-cpu" aria-hidden="true"></i>
+                      </div>
+                      <h3 class="h5">C</h3>
+                      <p class="text-body-secondary mb-0">
+                        Указатели, ручное управление памятью и низкоуровневые
+                        структуры данных.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-sm-4">
+                  <article
+                    class="card card-lift h-100 border-0 shadow-sm rounded-4"
+                  >
+                    <div class="card-body p-4">
+                      <div class="icon-badge mb-3">
+                        <i class="bi bi-code-slash" aria-hidden="true"></i>
+                      </div>
+                      <h3 class="h5">Kotlin</h3>
+                      <p class="text-body-secondary mb-0">
+                        Разработка приложений, ООП и функциональные возможности
+                        языка.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+
+              <h3 class="h6 text-uppercase text-body-secondary fw-bold mb-3">
+                Инструменты
+              </h3>
+              <div class="row g-3 g-md-4">
+                <div class="col-sm-6">
+                  <article
+                    class="card card-lift h-100 border-0 shadow-sm rounded-4"
+                  >
+                    <div class="card-body p-4">
+                      <div class="icon-badge mb-3">
+                        <i class="bi bi-git" aria-hidden="true"></i>
+                      </div>
+                      <h3 class="h5">Git</h3>
+                      <p class="text-body-secondary mb-0">
+                        Ветвление, коммиты, слияния и работа с удалёнными
+                        репозиториями.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-sm-6">
+                  <article
+                    class="card card-lift h-100 border-0 shadow-sm rounded-4"
+                  >
+                    <div class="card-body p-4">
+                      <div class="icon-badge mb-3">
+                        <i class="bi bi-terminal" aria-hidden="true"></i>
+                      </div>
+                      <h3 class="h5">Linux</h3>
+                      <p class="text-body-secondary mb-0">
+                        Командная строка, сборка проектов и базовые инструменты
+                        разработчика.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section section-alt">
+        <div class="container" data-reveal>
+          <div class="row g-4 align-items-start">
+            <div class="col-lg-4">
+              <p class="section-kicker mb-2">Проекты</p>
+              <h2 class="section-title h1 mb-0">Что я делал</h2>
+            </div>
+            <div class="col-lg-8">
+              <div class="row g-3 g-md-4">
+                <div class="col-md-6">
+                  <article
+                    class="card card-lift h-100 border-0 shadow-sm rounded-4"
+                  >
+                    <div class="card-body p-4 d-flex flex-column">
+                      <div
+                        class="d-flex align-items-start justify-content-between gap-3 mb-3"
+                      >
+                        <div class="icon-badge">
+                          <i class="bi bi-box-seam" aria-hidden="true"></i>
+                        </div>
+                        <span class="badge text-bg-light border">GitHub</span>
+                      </div>
+                      <h3 class="h5 mb-2">marline</h3>
+                      <p class="text-body-secondary mb-4">
+                        Высокопроизводительная Rust-библиотека для дедупликации
+                        данных: similarity-based chunking, дельта-кодирование,
+                        кластеризация и параллельная обработка.
+                      </p>
+                      <a
+                        class="btn btn-outline-accent mt-auto align-self-start"
+                        href="https://github.com/DenisPotapov0/marline"
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        Открыть репозиторий
+                        <i
+                          class="bi bi-arrow-up-right ms-1"
+                          aria-hidden="true"
+                        ></i>
+                      </a>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-6">
+                  <article
+                    class="card card-lift h-100 border-0 shadow-sm rounded-4"
+                  >
+                    <div class="card-body p-4 d-flex flex-column">
+                      <div
+                        class="d-flex align-items-start justify-content-between gap-3 mb-3"
+                      >
+                        <div class="icon-badge">
+                          <i class="bi bi-github" aria-hidden="true"></i>
+                        </div>
+                        <span class="badge text-bg-light border">Профиль</span>
+                      </div>
+                      <h3 class="h5 mb-2">Больше на GitHub</h3>
+                      <p class="text-body-secondary mb-4">
+                        Учебные работы, эксперименты и проекты, которые ещё не
+                        попали в портфолио.
+                      </p>
+                      <a
+                        class="btn btn-outline-accent mt-auto align-self-start"
+                        href="https://github.com/DenisPotapov0"
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        Перейти в профиль
+                        <i
+                          class="bi bi-arrow-up-right ms-1"
+                          aria-hidden="true"
+                        ></i>
+                      </a>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacts" class="section">
+        <div class="container" data-reveal>
+          <div class="row g-4 align-items-start">
+            <div class="col-lg-4">
+              <p class="section-kicker mb-2">Контакты</p>
+              <h2 class="section-title h1 mb-3">Связаться со мной</h2>
+              <p class="text-body-secondary mb-0">
+                Открыт к вопросам, обсуждению проектов и сотрудничеству.
+              </p>
+            </div>
+            <div class="col-lg-8">
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <a
+                    class="card card-lift contact-card h-100 border-0 shadow-sm rounded-4 text-decoration-none"
+                    href="mailto:daerexq@yandex.ru"
+                  >
+                    <div class="card-body p-4">
+                      <div class="icon-badge mb-3">
+                        <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+                      </div>
+                      <h3 class="h6 text-uppercase text-body-secondary mb-1">
+                        Email
+                      </h3>
+                      <span class="contact-value">daerexq@yandex.ru</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-4">
+                  <a
+                    class="card card-lift contact-card h-100 border-0 shadow-sm rounded-4 text-decoration-none"
+                    href="https://t.me/DAEReXQ"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <div class="card-body p-4">
+                      <div class="icon-badge mb-3">
+                        <i class="bi bi-telegram" aria-hidden="true"></i>
+                      </div>
+                      <h3 class="h6 text-uppercase text-body-secondary mb-1">
+                        Telegram
+                      </h3>
+                      <span class="contact-value">@DAEReXQ</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-4">
+                  <a
+                    class="card card-lift contact-card h-100 border-0 shadow-sm rounded-4 text-decoration-none"
+                    href="https://github.com/DenisPotapov0"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <div class="card-body p-4">
+                      <div class="icon-badge mb-3">
+                        <i class="bi bi-github" aria-hidden="true"></i>
+                      </div>
+                      <h3 class="h6 text-uppercase text-body-secondary mb-1">
+                        GitHub
+                      </h3>
+                      <span class="contact-value">DenisPotapov0</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer py-4">
+      <div
+        class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2"
+      >
+        <span class="text-body-secondary"
+          >© <span id="year">2026</span> Потапов Денис</span
+        >
+        <span class="text-body-secondary small"
+          >СПбГУ · Матмех · Программная инженерия</span
+        >
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
